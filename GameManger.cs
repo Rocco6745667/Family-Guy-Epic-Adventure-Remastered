@@ -159,4 +159,14 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         Debug.Log("Progress reset!");
     }
+
+    public void AddScore(int value)
+    {
+    score += value;
+    Debug.Log("Score: " + score);
+
+    // Check for bonuses or other logic
+    CheckForBonus();
+    }
+
 }
